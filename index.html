@@ -4,88 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PraRoz">
     <title>Web Design</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./asset/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./asset/favicon-16x16.png">
+    <link rel="manifest" href="./asset/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<main>
-    <nav class="navbar">
-        <header class="icon">
-            <h1 class="logo">PraRoz</h1>
-            <span><button  class="toggle"><i class="fas fa-bars ouvrir" aria-hidden="true"></i></button></span>
-        </header>
-        <div class="menu" role="navigation">
+    <header>
+        <h1 class="logo">PraRoz</h1>
+        <span>
+            <button  class="toggle">
+                <i class="fas fa-bars ouvrir" aria-hidden="true"></i>
+            </button>
+        </span>
+        <nav class="menu">
             <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">SERVICES</a></li>
-                <li><a href="">DESIGN</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
-        </div>
-
-        <div class="search" role="navigation">
-            <fieldset>
-                <legend>Sign In</legend>
-                <form action="https://www.google.com/search" role="search" method="GET">
-
-                    <label for="ser">Search</label>
-                    <input class="srch" id="ser" type="search" autocomplete="on" name="q" placeholder="Type To Text" required><!--ce qu'on met pour for doit etre le mem aux id dans l'input-->
-
-                    <button type="submit" class="btn">Search</button>
-
-                </form>
-            </fieldset>
-        </div>
-
-    </nav>
-
+        </nav>
+        <form action="https://www.google.com/search" class="search" method="get" name="searchform">
+            <input class="srch" type="search" name="q" autocomplete="on" placeholder="Type To text" id="search" aria-required="true" aria-labelledby="search" required>
+            <input type="submit" name="bouton" value="Search">
+        </form>
+    </header>
+<main>
     <section class="content">
-        <h2>Web Design & <br><span>Developement</span> <br>Course</h2>
-        <p class="par">Lorem ipsum dolor test,<br> sit amet consectetur adipisicing elit.<br> Exercitationem vitae reiciendis <br> veniam nisi, natus eaque maxime <br> praesentium mollitia veritatis incidunt!</p>
-        <a class="cn" href="#">JOIN US</a>
+        <h2>Web Design & <br><span>Development</span> <br>Course</h2>
+        <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque
+            expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus
+            <br> a quae totam ipsa illum minus laudantium?
+        </p>
+
+        <a href="#" class="cn">JOIN US</a>
+
+        <section class="form">
+            <h2>Login Here</h2>
+            <p class="warning"></p>
+
+            <form action="index.html" method="post">
+
+                <label for="email">Mail</label>
+                <input type="email" class="put" name="email" placeholder="Enter Email Here" id="email" aria-required="true" aria-labelledby="email" required>
+                
+                <label for="password">Search</label>
+                <input type="password" class="put" name="password" placeholder="Enter Password Here" id="password" aria-required="true" aria-labelledby="password" required>
+                
+                <button type="submit" class="btnn">Login</button>
+            </form>
+
+            <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a>here
+            </p>
+            <p class="liw">Log in with</p>
+
+            <ul class="icons">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-google"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-skype"></ion-icon></a></li>
+            </ul>
+        </section>
     </section>
-
-    <div class="form" role="form">
-            <fieldset>
-                <legend>Login Here</legend>
-                <form action="index.html" method="post">
-
-                    <label for="email">Mail</label>
-                    <input class="put" id="email" type="email" name="email" placeholder="Enter Email Here">
-                    <!--ce qu'on met pour for doit etre le mem aux id dans l'input-->
-
-                    <label for="password">Search</label>
-                    <input class="put" id="password" type="password" name="password" placeholder="Enter password Here">
-                    <!--ce qu'on met pour for doit etre le mem aux id dans l'input-->
-
-                    <button type="submit" class="btnn">Login</button>
-
-                    <ul id="acc">
-                        <li class="link">Don't have an account</li>
-                        <li><a class="linka" href="#">Sign up</a> <a class="lind"> here</a></li>
-                        <li class="liw">Log in with</li>
-                    </ul>
-
-                    <ul class="icons">
-                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-google"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-skype"></ion-icon></a></li>
-                    </ul>
-                </form>
-            </fieldset>
-        </div>
-
 </main>
 
 <footer>
-    <p> &copy; - lahmar Tabai 2022</p>
+    <p> &copy; - LAHMAR Tabai 2022 - All rights reserved for educational purposes only</p>
 </footer>
     
     
