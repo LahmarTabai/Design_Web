@@ -2,7 +2,7 @@
 
 * Il a enlevé les balises Méta 
 * div main => main comme balise
-* Logo => Il pouvé la créer directement sur "https://favicon.io/favicon-generator/"
+* Logo => Il pouvait la créer directement sur "https://favicon.io/favicon-generator/"
 * Au lieu de H1  => Il fallait utiliser H1
 * Ce Site n'est pas sémantique
 * Plusieurs Erreurs au niveau d'accessibilité
@@ -22,11 +22,22 @@
 
 # JS
 
-* Pas d'initialisation du DOM
+* Pas d'initialisation du DOM => Pour que le DOM se charge complètement apres le c'est le tour du Js avec ces lignes de codes :
+
+"  
+document.addEventListener("DOMContentLoaded", () => {
+       console.log("loaded");
+    });
+"
+
+* Pas d'utilisation du transcompileur Babel => Babel est un Transpileur, un type de compilateur qui sert compiler du code source d’un certain langage de programmation en du code source d’un autre langage de programmation. En ce qui concerne Babel, il permet de convertir du Javascript en du…Javascript ! Pour être plus précis, il permet de convertir du code javascript récent (syntaxe ES2015+) en du code javascript capable d’être interprété par des vieux navigateurs.
+
 * Il y'a pas de stockage dans le LocalStorage => Utiliser les Fonctionnalités en Js pour stocker et récupérer des données 
 * Utulisation des fonction à l'anciennes => fonction fléchés c'est plus optimisées
+
+
 
 ![](/asset/image.PNG)
 
 
-Pour voir le site : [voir lien](https://lahmartabai.github.io/Design_Web/)
+Pour voir le site : [voir Site](https://lahmartabai.github.io/Design_Web/)
