@@ -3,8 +3,9 @@
 * Il a enlevé les balises Méta 
 * div main => main comme balise
 * Logo => Il pouvait la créer directement sur "https://favicon.io/favicon-generator/"
-* Au lieu de H1  => Il fallait utiliser H1
+* Pas d'utilisation de H1  => Il fallait utiliser H1 puis H2 puis H3...
 * Ce Site n'est pas sémantique
+* Il N'ya pas d'icone dans la barre de navigation => Il n'ya pas de favicon
 * Plusieurs Erreurs au niveau d'accessibilité
 * Il manque la meta description pour le referencement 
 * Pas de Form dans le HTML
@@ -22,7 +23,7 @@
 
 # JS
 
-* Pas d'initialisation du DOM => Pour que le DOM se charge complètement apres le c'est le tour du Js avec ces lignes de codes :
+* Pas d'initialisation du DOM => Pour que le DOM se charge complètement avant, puis c'est le tour du Js qui se charge : la solution est avec ces lignes de codes :
 
 "  
 document.addEventListener("DOMContentLoaded", () => {
