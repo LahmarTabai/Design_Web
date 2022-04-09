@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /****************************************************/
+  /**************** Partie Button Burger ******************/
 
   let butn = document.querySelectorAll(".toggle");
   let body = document.querySelector('body');
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   };
 
-  /****************************************************/
+  /*************** Vérification Mail  **************/
 
     let el = document.getElementsByName("password")[0];
     let email = document.getElementsByName("email")[0];
@@ -38,11 +38,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const emails = localStorage.getItem('mail', User.mail);
     const mdp = localStorage.getItem('password', User.pwd);
 
+    let targ = User.mail;
+    let identt = targ.substring(0, targ.indexOf('@'));
+    
+    let tark = email.value;
+    let ident = tark.substring(0, tark.indexOf('@'));
+
+    console.log(ident);
+
+
+
     let btn = document.querySelector(".btnn");
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      el.value == mdp && email.value == emails ? war.innerHTML = "Welcome" : war.innerHTML = "You are not Allowed"
-      if(war.innerHTML == "Welcome") {
+      el.value == mdp && email.value == emails ? war.innerHTML = "Welcome " + `${identt}`  : war.innerHTML = "Sorry " + `${ident}` +" You are not Allowed"
+      if(war.innerHTML == "Welcome " + `${identt}`) {
         war.classList.remove("fail");
         war.classList.add("success");
       }else {
